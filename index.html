@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="./static/css/index.bundle.css">
+</head>
+<body>
+<div class="content-wrap">
+    <header class="header">
+        <div class="container">
+            <h2 class="header__title">TODOList</h2>
+        </div>
+    </header>
+    <main class="content">
+        <div class="container">
+            <div class="filter">
+                <form class="filter-form">
+                    <label class="filter-form__label filter-form__search">
+                        <input type="search" name="search" class="filter-form__field" placeholder="search by title">
+                    </label>
+                    <label class="filter-form__label">
+                        <select name="status" class="filter-form__select">
+                            <option value="0">all</option>
+                            <option value="1">open</option>
+                            <option value="2">done</option>
+                        </select>
+                    </label>
+                    <label class="filter-form__label">
+                        <select name="priority" class="filter-form__select">
+                            <option value="0">all</option>
+                            <option value="1">high</option>
+                            <option value="2">normal</option>
+                            <option value="3">low</option>
+                        </select>
+                    </label>
+                </form>
+                <button class="btn create-btn">Create</button>
+            </div>
+            <div id="tasks" class="tasks"></div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__name">Kolintso Anna</p>
+        </div>
+    </footer>
+</div>
+<div class="popup">
+    <div class="popup__block">
+        <form class="create-task">
+            <label class="create-task__label">
+                <span class="create-task__title">Title:</span>
+                <input type="text" name="title" class="create-task__field" placeholder="Title">
+            </label>
+            <label class="create-task__label">
+                <span class="create-task__title">Description:</span>
+                <textarea type="text" name="description" class="create-task__field create-task__field_textarea" placeholder="Description"></textarea>
+            </label>
+            <label class="create-task__label">
+                <span class="create-task__title">Priority:</span>
+                <select name="priority">
+                    <option value="1">High</option>
+                    <option value="2">Normal</option>
+                    <option value="3">Low</option>
+                </select>
+            </label>
+            <div class="create-task__btn">
+                <button class="btn" type="reset">Cancel</button>
+                <button class="btn" type="submit">Save</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="./src/js/index.js"></script>
+</body>
+</html>
